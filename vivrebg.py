@@ -10,10 +10,14 @@ import sys
 
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
-with open('КУРСОВА-РАБОТА Христо Любомиров 13858.csv', 'w', newline='', encoding='utf-8') as f:
+with open('vivre_data.csv', 'w', newline='', encoding='utf-8') as f:
     writer = csv.writer(f)
 
-    driver = webdriver.Firefox()
+# enable the browser you have installed or want to use. Currently it's set to Chrome.
+    #driver = webdriver.Firefox()
+    #driver = webdriver.Edge()
+    #driver = webdriver.Safari()
+    driver = webdriver.Chrome()
 
     url = 'https://www.vivre.bg/s-1056/kanapeta-i-aglovi-kanapeta'
     driver.get(url)
